@@ -1,9 +1,5 @@
 const cageMovies = document.querySelector('#cageMovies')
 
-function renderName(){
-    
-}
-
 function submitHander(ev){
     ev.preventDefault()
     const f = ev.target
@@ -11,10 +7,10 @@ function submitHander(ev){
     const movie = f.cageMovies.value
     const movie2 = f.anotherMovie.value
 
-   // const boldName = document.createElement('strong')
-   // boldName.textContent = name
+    const boldName = document.createElement('strong')
+    boldName.textContent = name
    const nameItem = document.createElement('li')
-   nameItem.textContent = `Favorite Moie: ${movie}`
+   nameItem.textContent = `Favorite Movie: ${movie}`
 
    const nameItem2 = document.createElement('li')
    nameItem.textContent = `Second Favorite Movie: ${movie2}`
@@ -23,7 +19,7 @@ function submitHander(ev){
    list.appendChild(nameItem)
    list.appendChild(nameItem2)
 
-   // details.appendChild(boldName)
+    details.appendChild(boldName)
    details.innerHTML=`
    <ul>
     <li>Movie: ${movie}</li>
