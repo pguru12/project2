@@ -6,7 +6,10 @@ function submitHander(ev){
     const details=document.querySelector('#details')
     const movie = f.cageMovies.value
 
-    details.innerHTML +=`<strong>${movie}</strong>`
+    const boldName = document.createElement('strong')
+    boldName.textContent = name
+
+    details.appendChild(boldName)
 }
 
 cageMovies.addEventListener('submit', submitHander)
